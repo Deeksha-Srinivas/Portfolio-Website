@@ -8,12 +8,20 @@
         }
 
         body {
-            background: #121212;
-            color: #fff;
+            background: #000000;
+            /* background: linear-gradient(to right, #4e4c4c,#FFC0CB); */
+            color: #ffffff;
             text-align: center;
             padding: 20px;
         }
 
+        
+        
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px; /* Adjust based on your nav height */
+        }
+        
         /* Navigation Bar */
         nav {
             display: flex;
@@ -45,6 +53,7 @@
             font-size: 18px;
             padding: 10px 15px;
             border-radius: 25px;
+            border: 2px solid #FFC0CB;
             background: #333;
             transition: 0.3s ease;
         }
@@ -75,6 +84,15 @@ ul li {
     		position: relative;
     		right: 100px; /* Moves the button 20px to the left */
 	}
+    #cursor {
+        font-size: 24px;
+        font-weight: bold;
+        animation: blink 0.7s infinite;
+    }
+    
+    @keyframes blink {
+        50% { opacity: 0; }
+    }
 
 	.contact-btn:hover {
     	background: #FFC0CB;
@@ -95,12 +113,15 @@ ul li {
         }
 
         .tagline {
-            font-style: italic;
+            /* font-style: italic; */
             color: #FFC0CB;
+            font-size: 18px;
             margin-bottom: 10px;
         }
 
         .description {
+            color: #FFC0CB;
+            /* font-style: italic; */
             font-size: 18px;
             margin-bottom: 20px;
         }
@@ -114,9 +135,10 @@ ul li {
             text-decoration: none;
             border-radius: 8px;
             transition: 0.3s;
+            margin-left: -38px;
         }
 
-        .resume-btn:hover {
+        .resume-btn:hover { 
             background: #FFC0CB;
             color: #000000;
         }
@@ -129,13 +151,23 @@ ul li {
             margin-bottom: 20px;
 	    color: #FFC0CB;
         }
+        h1 {
+           
+            font-size: 48px;
+            font-weight: bold;
+            background: linear-gradient( #f399a8, #ffffff);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        
 
 	.about-container {
+        font-size: 17px;
     		background-color: #222; /* Dark background */
     		color: #FFFFF; 
     		padding: 20px;
     		border-radius: 10px;
-    		width: 60%;
+    		width: 75%;
     		margin: 20px auto;
     		text-align: center;
     		box-shadow: 0px 4px 8px rgba(255, 192, 203, 0.2);
@@ -263,4 +295,44 @@ ul li {
 }
 
 
-    </style>
+/* Sidebar Contact Menu */
+.sidebar {
+    position: fixed;
+    top: 70px; /* Adjust as needed */
+    right: -190px; /* Hidden initially */
+    width: 200px;
+    height: 95px;
+    /* background: #1e1e1e; */
+    background: rgb(34, 34, 34);
+    /* background: rgba(0, 0, 0, 0.9); */
+    color: white;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    transition: right 0.4s ease-in-out;
+    border-radius: 10px 0 0 10px;
+}
+
+/* Sidebar Links */
+.sidebar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+/* Sidebar Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+ </style>
