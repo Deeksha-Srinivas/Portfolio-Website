@@ -1,0 +1,12 @@
+{
+    "name": "Deeksha Srinivas",
+    "title": "DevOps Engineer | Angular & Flask Developer",
+    "about": "I'm a passionate DevOps engineer...",
+    "skills": ["AWS", "Python", "SQL", "HTML/CSS", "Git", "Prompt Engineering"],
+    "projects": ["Infant Cry Classification","Voice Assistant","Text-to-Image Generator Using OpenAIs DALL-E API", "Portfolio Website"],
+    "contact": {
+        "email": "deekshasrinivas12@gmail.com",
+        "github": "https://github.com/deeksha-srinivas",
+        "linkedin": "https://www.linkedin.com/in/deeksha-srinivas12/"
+    }
+}
