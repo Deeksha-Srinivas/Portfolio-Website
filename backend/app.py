@@ -4,11 +4,6 @@ import os
 
 app = Flask(__name__, static_folder="../frontend", static_url_path="/")
 
-# Load portfolio data
-def load_data():
-    with open(os.path.join(os.path.dirname(__file__), "data.json"), "r") as file:
-        return json.load(file)
-
 @app.route("/")
 def serve_frontend():
     return send_from_directory("../frontend", "index.html")
@@ -20,7 +15,6 @@ def get_data():
 @app.route('/certificates/<path:filename>')
 def serve_certificate(filename):
     return send_from_directory('static/certificates', filename)
-
 
 
 if __name__ == '__main__':
